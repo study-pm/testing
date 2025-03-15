@@ -1,0 +1,25 @@
+{
+  "name": "triangle",
+  "version": "0.1.0",
+  "description": "triangle kind testing",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@gitlab.com/study-pm/testing.git"
+  },
+  "keywords": [
+    "triangle"
+  ],
+  "author": "viktor",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://gitlab.com/study-pm/testing/issues"
+  },
+  "homepage": "https://gitlab.com/study-pm/testing#readme"
+}
