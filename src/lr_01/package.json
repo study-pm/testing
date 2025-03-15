@@ -6,7 +6,13 @@
   "directories": {
     "test": "test"
   },
+  "config": {
+    "host": "127.0.0.1",
+    "port": "8080"
+  },
   "scripts": {
+    "serve": "npx live-server",
+    "start": "npm run serve",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
