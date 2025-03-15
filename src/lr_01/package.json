@@ -12,8 +12,7 @@
   },
   "scripts": {
     "serve": "npx live-server",
-    "start": "npm run serve",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "npm run serve"
   },
   "repository": {
     "type": "git",
@@ -30,5 +29,8 @@
   "homepage": "https://gitlab.com/study-pm/testing#readme",
   "dependencies": {
     "live-server": "^1.2.2"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0"
   }
 }
