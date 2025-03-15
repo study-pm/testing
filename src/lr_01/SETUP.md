@@ -8,7 +8,9 @@ $ npm init -y   # Initialize with default values
 ```
 
 ## Install server
-install local server
+```sh
+$ npm i live-server
+```
 
 ## Install testing software
 install -D jest for unit testing

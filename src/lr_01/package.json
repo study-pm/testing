@@ -21,5 +21,8 @@
   "bugs": {
     "url": "https://gitlab.com/study-pm/testing/issues"
   },
-  "homepage": "https://gitlab.com/study-pm/testing#readme"
+  "homepage": "https://gitlab.com/study-pm/testing#readme",
+  "dependencies": {
+    "live-server": "^1.2.2"
+  }
 }
