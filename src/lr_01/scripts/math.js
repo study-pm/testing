@@ -40,7 +40,7 @@ export default class Triangle {
         [3, { en: "equilateral", ru: "равносторонний" }]
     ]);
     get kind() {
-        if (this.sides[0] === this.sides[1] && this.sides[1] === this.sides[2]) return 3;
+        if (this.sides[0] === this.sides[1] === this.sides[2]) return 3;
         if (this.sides[0] === this.sides[1]
          || this.sides[0] === this.sides[2]
          || this.sides[1] === this.sides[2])
