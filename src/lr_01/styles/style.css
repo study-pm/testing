@@ -18,6 +18,7 @@ section {
     background-color: hsla(0, 0%, 0%, 0.1);
     border-radius: 5px;
     margin: 2em;
+    max-height: max-content;
     padding: 2em;
 }
 body {
