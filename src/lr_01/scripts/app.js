@@ -4,9 +4,9 @@ document.form_novalidate.addEventListener('submit', (evt) => {
     evt.preventDefault(); // Prevent form submission
 
     const sides = [evt.target.a.value, evt.target.b.value, evt.target.c.value];
-    const output = evt.target.form_out
+    const output = evt.target.outputs;
     const result = evt.target.result;
-    const legend = evt.target.form_out.querySelector('legend');
+    const legend = evt.target.outputs.querySelector('legend');
 
     try {
         const triangle = new Triangle([sides[0], sides[1], sides[2]]);
@@ -26,5 +26,9 @@ document.form_novalidate.addEventListener('submit', (evt) => {
 
 document.form_novalidate.addEventListener('reset', (evt) => {
     evt.target.result.textContent = null;
-    evt.target.form_out.classList.remove("is_on");
+    evt.target.outputs.classList.remove("is_on");
+});
+
+document.form_novalidate.addEventListener("input", () => {
+    form_novalidate.outputs.classList.remove("is_on");
 });
