@@ -58,11 +58,45 @@ footer p {
 }
 header {
     background-color: rgba(0, 0, 0, 0.2);
-    min-height: 60px;
 }
 main {
     display: flex;
     flex: 1;
+}
+menu {
+    display: flex;
+    align-items: center;
+}
+nav {
+    font-weight: bold;
+    text-transform: uppercase;
+}
+nav ul {
+    margin: 0;
+}
+nav ul li {
+    display: inline;
+    margin: 1em;
+}
+
+/* Links */
+nav a {
+    color: hsl(200, 75%, 75%);
+    text-decoration: none;
+}
+a {
+    filter: brightness(1);
+    transition: filter 0.25s ease-in-out;
+}
+a:focus {
+    outline: none;
+    text-shadow: hsla(200, 75%, 75%, 1) 0 0 10px;
+}
+a:hover {
+    filter: brightness(1.25)
+}
+a:active {
+    filter: brightness(1.5)
 }
 
 /* Forms */
