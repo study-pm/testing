@@ -67,3 +67,84 @@ Install concurrently to run sever and e2e test with selenium in parallel:
 ```sh
 $ npm i -D concurrently
 ```
+
+Install Jest-HTML-Reporter:
+```sh
+$ npm install jest-html-reporter --save-dev
+```
+
+Configure Jest
+
+Update your *jest.config.js* file:
+```js
+module.exports = {
+  reporters: [
+    'default',
+    [
+      './node_modules/jest-html-reporter',
+      {
+        pageTitle: 'Test Report',
+        outputPath: './test-report.html',
+      },
+    ],
+  ],
+};
+```
+
+Or *package.json* "jest" section:
+```json
+"reporters": [
+      "default",
+      [
+        "./node_modules/jest-html-reporter",
+        {
+          "pageTitle": "Test Report",
+          "outputPath": "./test/report.html"
+        }
+      ]
+    ],
+```
+
+Install Jest-JUnit:
+```sh
+$ npm install --save-dev jest-junit
+```
+
+Create or update your *jest.config.js* file with the following configuration:
+```js
+module.exports = {
+  reporters: [
+    'default',
+    [
+      'jest-junit',
+      {
+        outputDirectory: './test-reports',
+        outputName: 'jest-test-results.xml',
+      },
+    ],
+  ],
+};
+```
+
+Using both reporters:
+```js
+module.exports = {
+  reporters: [
+    'default',
+    [
+      'jest-junit',
+      {
+        outputDirectory: './test-reports',
+        outputName: 'jest-test-results.xml',
+      },
+    ],
+    [
+      './node_modules/jest-html-reporter',
+      {
+        pageTitle: 'Test Report',
+        outputPath: './test-report.html',
+      },
+    ],
+  ],
+};
+```
