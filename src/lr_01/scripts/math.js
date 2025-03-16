@@ -13,10 +13,10 @@ export default class Triangle {
             const parsed = parseInt(item);
             try {
                 if (Number.isNaN(parsed)) {
-                    throw new Error(`must be a natural number`);
+                    throw new Error(`должно быть натуральное число`);
                 }
                 if (parsed < 1) {
-                    throw new Error(`must be an integer greater than zero`);
+                    throw new Error(`должно быть целое число больше нуля`);
                 }
                 if (parsed > Number.MAX_SAFE_INTEGER) {
                     throw new Error(`must be within safe integer range`);
@@ -30,7 +30,7 @@ export default class Triangle {
         if (sides[0] + sides[1] <= sides[2]
          || sides[0] + sides[2] <= sides[1]
          || sides[1] + sides[2] <= sides[0]) {
-            throw new Error("Invalid triangle: no triangle can be constructed from the input values");
+            throw new Error("Invalid triangle: невозможно построить треугольник с указанными сторонами");
         }
         this.sides = sides
     }

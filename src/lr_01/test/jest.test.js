@@ -56,12 +56,12 @@ describe('Triangle class', () => {
     });
 
     it('should throw an error for non-numeric input', () => {
-        expect(() => new Triangle(['a', 'b', 'c'])).toThrowError('Invalid input argument value a: must be a natural number');
+        expect(() => new Triangle(['a', 'b', 'c'])).toThrowError('Invalid input argument value a: должно быть натуральное число');
     });
 
     it('should throw an error for negative or zero input', () => {
-        expect(() => new Triangle([1, 0, 3])).toThrowError('Invalid input argument value 0: must be an integer greater than zero');
-        expect(() => new Triangle([1, -2, 3])).toThrowError('Invalid input argument value -2: must be an integer greater than zero');
+        expect(() => new Triangle([1, 0, 3])).toThrowError('Invalid input argument value 0: должно быть целое число больше нуля');
+        expect(() => new Triangle([1, -2, 3])).toThrowError('Invalid input argument value -2: должно быть целое число больше нуля');
     });
 
 });
