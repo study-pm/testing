@@ -67,6 +67,13 @@ Setup file transforming and matching options:
   },
 ```
 
+Setup coverage report directory:
+```json
+"jest": {
+    "coverageDirectory": "test/coverage",
+}
+```
+
 ### E2E testing
 
 Install Selenium WebDriver:
@@ -181,4 +188,34 @@ Or in *package.json* "jest" section:
         }
       ]
     ],
+```
+
+As a result, the "jest" section should look like this:
+```json
+"jest": {
+    "coverageDirectory": "test/coverage",
+    "reporters": [
+      "default",
+      [
+        "jest-junit",
+        {
+          "outputDirectory": "./test/reports",
+          "outputName": "results.xml"
+        }
+      ],
+      [
+        "./node_modules/jest-html-reporter",
+        {
+          "pageTitle": "Test Report",
+          "outputPath": "./test/reports/results.html"
+        }
+      ]
+    ],
+    "transform": {
+      "^.+\\.(js|jsx)?$": "babel-jest"
+    },
+    "testMatch": [
+      "**/test/*.test.js"
+    ]
+  },
 ```
