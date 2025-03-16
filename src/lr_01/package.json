@@ -15,6 +15,14 @@
     "start": "npm run serve",
     "test": "jest --verbose ./test"
   },
+  "jest": {
+    "transform": {
+      "^.+\\.(js|jsx)?$": "babel-jest"
+    },
+    "testMatch": [
+      "**/test/*.test.js"
+    ]
+  },
   "repository": {
     "type": "git",
     "url": "git+ssh://git@gitlab.com/study-pm/testing.git"
@@ -32,6 +40,8 @@
     "live-server": "^1.2.2"
   },
   "devDependencies": {
+    "@babel/core": "^7.26.10",
+    "@babel/preset-env": "^7.26.9",
     "babel-jest": "^29.7.0",
     "jest": "^29.7.0"
   }
