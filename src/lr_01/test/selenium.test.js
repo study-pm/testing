@@ -98,11 +98,11 @@ describe('Triangle Type Checker Form', () => {
         await driver.wait(async () => {
             const resultElement = await driver.findElement(By.name('result'));
             const resultText = await resultElement.getText();
-            return resultText.includes('должно быть целое число');
+            return resultText.includes('должно быть натуральное число');
         }, 5000);
 
         const result = await driver.findElement(By.name('result')).getText();
-        expect(result).toContain('должно быть целое число');
+        expect(result).toContain('должно быть натуральное число без пробелов и нецифровых символов');
     });
 
     it('should display an error for zero or negative input', async () => {

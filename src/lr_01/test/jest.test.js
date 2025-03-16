@@ -56,7 +56,7 @@ describe('Triangle class', () => {
     });
 
     it('should throw an error for non-numeric input', () => {
-        expect(() => new Triangle(['a', 'b', 'c'])).toThrowError('Invalid input argument value a: должно быть натуральное число');
+        expect(() => new Triangle(['a', 'b', 'c'])).toThrowError('Invalid input argument value a: должно быть натуральное число без пробелов и нецифровых символов');
     });
 
     it('should throw an error for negative or zero input', () => {
@@ -82,7 +82,7 @@ describe('Triangle class', () => {
     });
 
     it('should handle extremely large inputs that exceed maximum integer value', () => {
-        expect(() => new Triangle([Number.MAX_SAFE_INTEGER + 1, Number.MAX_SAFE_INTEGER + 1, Number.MAX_SAFE_INTEGER + 1])).toThrowError('Invalid input argument value ' + (Number.MAX_SAFE_INTEGER + 1) + ': должно быть внутри безопасного числового диапазона');
+        expect(() => new Triangle([test_const.max+1, test_const.max+1, test_const.max+1])).toThrowError('Invalid input argument value ' + (Number.MAX_SAFE_INTEGER + 1) + ': не должно превышать максимального значения');
     });
 
 });
