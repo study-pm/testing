@@ -28,16 +28,16 @@
     <h1>Введите длины сторон треугольника</h1>
 
     <form name="form_novalidate">
-        <fieldset>
+        <fieldset name="inputs">
             <input type="text" name="a">
             <input type="text" name="b">
             <input type="text" name="c">
         </fieldset>
-        <fieldset>
+        <fieldset name="buttons">
             <input type="reset" value="Сброс"></button>
             <input type="submit" value="Проверить"></button>
         </fieldset>
-        <fieldset name="form_out" class="border_on type_hidden">
+        <fieldset name="outputs" class="border_on type_hidden">
             <legend>Result</legend>
             <output name="result"></output>
         </fieldset>
