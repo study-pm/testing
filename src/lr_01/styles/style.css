@@ -1,0 +1,219 @@
+:root {
+    color-scheme: light dark;
+    --back-theme_cyan: linear-gradient(135deg, hsl(210, 50%, 25%) 0%, hsl(200, 75%, 20%) 30%, hsl(190, 50%, 25%) 75%, hsl(175, 75%, 25%) 100%);
+    --txt-mode_light: hsla(200, 100%, 0%, 1);
+    --txt-mode_dark: hsla(200, 25%, 95%, 0.8);
+}
+/* Main */
+aside {
+    min-width: 20px;
+}
+article {
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    padding: 2em;
+}
+section {
+    background-color: hsla(0, 0%, 0%, 0.1);
+    border-radius: 5px;
+    margin: 2em;
+    padding: 2em;
+}
+body {
+    background-color: hsl(200, 50%, 20%);
+    background-image: var(--back-theme_cyan);
+    color: light-dark(var(--txt-mode_light), var(--txt-mode_dark));
+    display: flex;
+    flex-direction: column;
+    font-family: "Roboto Flex", serif;
+    font-optical-sizing: auto;
+    font-variation-settings:
+        "slnt" 0,
+        "wdth" 100,
+        "GRAD" 0,
+        "XOPQ" 96,
+        "XTRA" 468,
+        "YOPQ" 79,
+        "YTAS" 750,
+        "YTDE" -203,
+        "YTFI" 738,
+        "YTLC" 514,
+        "YTUC" 712;
+    justify-content: space-between;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+body.color_light {
+    background-color: hsl(202, 100%, 46%);
+    background-image: linear-gradient(160deg, #0093E9 0%, #80D0C7 100%);
+}
+body.color_dark {
+    background-color: hsl(202, 100%, 46%);
+    background-image: linear-gradient(160deg, #0093E9 0%, #80D0C7 100%);
+}
+footer p {
+    text-align: center;
+}
+header {
+    background-color: rgba(0, 0, 0, 0.2);
+    min-height: 60px;
+}
+main {
+    display: flex;
+    flex: 1;
+}
+
+/* Forms */
+fieldset {
+    border: none;
+    border-radius: 3px;
+    box-sizing: border-box;
+    display: flex;
+    flex-flow: row nowrap;
+    margin: 1em 0;
+    padding: 0;
+    width: 100%;
+}
+fieldset input {
+    flex: 1;
+    margin: 0 2px;
+}
+fieldset input:first-child {
+    margin-left: 0;
+}
+fieldset input:last-child {
+    margin-right: 0;
+}
+fieldset legend {
+    font-weight: bold;
+    padding: 0;
+}
+fieldset.border_on {
+    border: 1px solid hsla(200, 25%, 50%, 0.5);
+    padding: 1em;
+}
+fieldset.bordered_on legend {
+    padding: 2px;
+}
+form.width_narrow {
+    max-width: 250px;
+}
+form input {
+    box-sizing: border-box;
+    width: 100%;
+}
+form .buttons, fieldset[name="form_ctl"] {
+    border: none;
+    display: flex;
+    flex-flow: row nowrap;
+    margin: 10px 0;
+    padding: 0;
+}
+form .buttons > input:not(:first-child):not(:last-child),
+fieldset[name="form_ctl"] >  input:not(:first-child):not(:last-child)
+{
+    margin: 0 2px;
+}
+form .buttons > input:first-child,
+fieldset[name="form_ctl"] > input:first-child
+{
+    margin-right: 2px;
+}
+form .buttons > input:last-child,
+fieldset[name="form_ctl"] > input:last-child
+{
+    margin-left: 2px;
+}
+form label {
+    display: block;
+    margin: 1em 0;
+}
+form label > p {
+    margin: 5px 0;
+}
+input {
+    background-color: hsla(200, 25%, 10%, 0.1);
+    border: 1px solid hsla(200, 25%, 50%, 0.5);
+    border-radius: 2px;
+    color: white;
+    filter: brightness(1);
+    min-height: 2.5em;
+    padding: 0.75em;
+    transition: filter 0.25s ease-in-out;
+}
+input:hover {
+    filter: brightness(1.25);
+}
+input:focus {
+    box-shadow: 0 0 5px  hsla(200, 75%, 75%, 0.75);
+    outline: 1px solid hsla(200, 50%, 75%, 0.5);
+}
+input:focus:not([type="button"]):not([type="reset"]):not([type="submit"]) {
+    text-shadow: hsla(200, 75%, 75%, 1) 0 0 10px;
+}
+input:focus:invalid:not([type="button"]):not([type="reset"]):not([type="submit"]) {
+    background-color: hsla(0, 50%, 50%, 0.25);
+}
+input:focus:valid:not([type="button"]):not([type="reset"]):not([type="submit"]) {
+    background-color: hsla(175, 50%, 50%, 0.1);
+}
+input:active {
+    filter: brightness(1.5);
+}
+input::placeholder {
+    color: hsla(0, 0%, 75%, 0.5);
+    font-style: italic;
+    text-shadow: none;
+}
+input[type="submit"] {
+    background-color: hsla(0, 50%, 50%, 0.75);
+}
+input[type="reset"] {
+    background-color: hsla(175, 50%, 50%, 0.5);
+}
+output{
+    min-height: 3em;
+}
+[name="form_out"].state_error {
+    color: hsl(0, 100%, 60%);
+}
+
+/* Lists */
+ul li {
+    margin: 1em 0;
+}
+
+/* Text */
+p {
+    font-size: medium;
+}
+
+/* Actions */
+.type_hidden {
+    opacity: 0;
+    transition: opacity 0.25s ease-in-out;
+}
+.is_on {
+    opacity: 1;
+}
+.type_visible {
+    opacity: 1;
+    transition: opacity 0.25s ease-in-out;
+}
+.is_off {
+    opacity: 0;
+}
+
+@media (max-width: 720px) {
+    article {
+        padding: 1em;
+    }
+    aside {
+        display: none;
+    }
+    section {
+        margin: 0;
+    }
+}
