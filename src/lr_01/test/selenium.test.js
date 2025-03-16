@@ -18,24 +18,37 @@ describe('Triangle Type Checker Form', () => {
     it('should identify an equilateral triangle', async () => {
         await driver.get(targetUrl);
 
-        await driver.findElement(By.name('side1')).sendKeys('5');
-        await driver.findElement(By.name('side2')).sendKeys('5');
-        await driver.findElement(By.name('side3')).sendKeys('5');
-        await driver.findElement(By.css('button[type=submit]')).click();
+        await driver.findElement(By.name('a')).sendKeys('5');
+        await driver.findElement(By.name('b')).sendKeys('5');
+        await driver.findElement(By.name('c')).sendKeys('5');
+        await driver.findElement(By.css('input[type=submit]')).click();
 
-        const result = await driver.wait(until.elementLocated(By.name('result')), 5000).getText();
+        // const result = await driver.wait(until.elementLocated(By.name('result')), 5000).getText();
+        await driver.wait(async () => {
+            const resultElement = await driver.findElement(By.name('result'));
+            const resultText = await resultElement.getText();
+            return resultText.includes('equilateral');
+        }, 5000);
+
+        const result = await driver.findElement(By.name('result')).getText();
         expect(result).toBe('The triangle is equilateral.');
     });
 
     it('should identify an isosceles triangle', async () => {
         await driver.get(targetUrl);
 
-        await driver.findElement(By.name('side1')).sendKeys('4');
-        await driver.findElement(By.name('side2')).sendKeys('4');
-        await driver.findElement(By.name('side3')).sendKeys('6');
-        await driver.findElement(By.css('button[type=submit]')).click();
+        await driver.findElement(By.name('a')).sendKeys('4');
+        await driver.findElement(By.name('b')).sendKeys('4');
+        await driver.findElement(By.name('c')).sendKeys('6');
+        await driver.findElement(By.css('input[type=submit]')).click();
 
-        const result = await driver.wait(until.elementLocated(By.name('result')), 5000).getText();
+        await driver.wait(async () => {
+            const resultElement = await driver.findElement(By.name('result'));
+            const resultText = await resultElement.getText();
+            return resultText.includes('isosceles');
+        }, 5000);
+
+        const result = await driver.findElement(By.name('result')).getText();
         expect(result).toBe('The triangle is isosceles.');
     });
 
