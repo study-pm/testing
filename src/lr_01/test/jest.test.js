@@ -42,5 +42,26 @@ describe('Triangle class', () => {
         expect(triangle.kind).toBe(3);
         expect(Triangle.kinds.get(triangle.kind).en).toBe('equilateral');
     });
+    
+    it('should throw an error for non-array input', () => {
+        expect(() => new Triangle('123')).toThrowError('Invalid argument format string: must be array of three values');
+    });
+
+    it('should throw an error for array with less than three elements', () => {
+        expect(() => new Triangle([1, 2])).toThrowError('Invalid input array arguments count 2: must be exactly three values');
+    });
+
+    it('should throw an error for array with more than three elements', () => {
+        expect(() => new Triangle([1, 2, 3, 4])).toThrowError('Invalid input array arguments count 4: must be exactly three values');
+    });
+
+    it('should throw an error for non-numeric input', () => {
+        expect(() => new Triangle(['a', 'b', 'c'])).toThrowError('Invalid input argument value a: must be a natural number');
+    });
+
+    it('should throw an error for negative or zero input', () => {
+        expect(() => new Triangle([1, 0, 3])).toThrowError('Invalid input argument value 0: must be an integer greater than zero');
+        expect(() => new Triangle([1, -2, 3])).toThrowError('Invalid input argument value -2: must be an integer greater than zero');
+    });
 
 });

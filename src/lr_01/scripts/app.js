@@ -17,7 +17,7 @@ document.form_novalidate.addEventListener('submit', (evt) => {
     }
     catch (err) {
         legend.textContent = "Ошибка";
-        result.textContent = `Ошибка: ${err.message}`;
+        result.textContent = `${err.message}`;
         output.classList.add("state_error");
     }
 

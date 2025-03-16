@@ -35,7 +35,7 @@ export default class Triangle {
         this.sides = sides
     }
     static kinds = new Map([
-        [1, { en: "scalene", ru: "равносторонний" }],
+        [1, { en: "scalene", ru: "разносторонний" }],
         [2, { en: "isosceles", ru: "равнобедренный" }],
         [3, { en: "equilateral", ru: "равносторонний" }]
     ]);
