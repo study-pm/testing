@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1742150446418" clover="3.2.0">
-  <project timestamp="1742150446418" name="All files">
+<coverage generated="1742155171047" clover="3.2.0">
+  <project timestamp="1742155171047" name="All files">
     <metrics statements="28" coveredstatements="28" conditionals="32" coveredconditionals="32" methods="3" coveredmethods="3" elements="63" coveredelements="63" complexity="0" loc="28" ncloc="28" packages="1" files="1" classes="1"/>
     <file name="math.js" path="D:\study\topics\67d5bd7e5040133e8429f1c0\src\lr_01\scripts\math.js">
       <metrics statements="28" coveredstatements="28" conditionals="32" coveredconditionals="32" methods="3" coveredmethods="3"/>
@@ -12,9 +12,9 @@
       <line num="10" count="37" type="cond" truecount="4" falsecount="0"/>
       <line num="11" count="2" type="stmt"/>
       <line num="13" count="35" type="stmt"/>
-      <line num="14" count="35" type="cond" truecount="2" falsecount="0"/>
-      <line num="15" count="35" type="stmt"/>
-      <line num="16" count="35" type="cond" truecount="2" falsecount="0"/>
+      <line num="14" count="35" type="stmt"/>
+      <line num="15" count="35" type="cond" truecount="2" falsecount="0"/>
+      <line num="16" count="4" type="cond" truecount="2" falsecount="0"/>
       <line num="17" count="2" type="stmt"/>
       <line num="19" count="33" type="cond" truecount="2" falsecount="0"/>
       <line num="20" count="1" type="stmt"/>
