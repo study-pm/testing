@@ -23,15 +23,14 @@ describe('Triangle Type Checker Form', () => {
         await driver.findElement(By.name('c')).sendKeys('5');
         await driver.findElement(By.css('input[type=submit]')).click();
 
-        // const result = await driver.wait(until.elementLocated(By.name('result')), 5000).getText();
         await driver.wait(async () => {
             const resultElement = await driver.findElement(By.name('result'));
             const resultText = await resultElement.getText();
-            return resultText.includes('equilateral');
+            return resultText.includes('равносторонний');
         }, 5000);
 
         const result = await driver.findElement(By.name('result')).getText();
-        expect(result).toBe('The triangle is equilateral.');
+        expect(result).toBe('Треугольник равносторонний.');
     });
 
     it('should identify an isosceles triangle', async () => {
@@ -45,11 +44,11 @@ describe('Triangle Type Checker Form', () => {
         await driver.wait(async () => {
             const resultElement = await driver.findElement(By.name('result'));
             const resultText = await resultElement.getText();
-            return resultText.includes('isosceles');
+            return resultText.includes('равнобедренный');
         }, 5000);
 
         const result = await driver.findElement(By.name('result')).getText();
-        expect(result).toBe('The triangle is isosceles.');
+        expect(result).toBe('Треугольник равнобедренный.');
     });
 
 });
