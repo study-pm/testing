@@ -62,3 +62,8 @@ Install Selenium WebDriver:
 ```sh
 $ npm install --save-dev selenium-webdriver
 ```
+
+Install concurrently to run sever and e2e test with selenium in parallel:
+```sh
+$ npm i -D concurrently
+```
