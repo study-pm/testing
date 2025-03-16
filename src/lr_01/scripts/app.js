@@ -1,7 +1,7 @@
 import Triangle from './math.js';
 
 let note = document.getElementById("admonition");
-note.textContent += ` (но не более ${Number.MAX_SAFE_INTEGER.toLocaleString('ru')})`;
+note.textContent += ` (не более ${Number.MAX_SAFE_INTEGER.toLocaleString('ru')})`;
 
 document.form_novalidate.addEventListener('submit', (evt) => {
     evt.preventDefault(); // Prevent form submission
