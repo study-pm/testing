@@ -14,8 +14,6 @@ $ npm i live-server
 
 ## Install testing software
 
-### Configure Jest
-
 Install Jest:
 ```sh
 $ npm i -D jest
@@ -58,4 +56,9 @@ Setup file transforming and matching options:
       "**/test/*.test.js"
     ]
   },
+```
+
+Install Selenium WebDriver:
+```sh
+$ npm install --save-dev selenium-webdriver
 ```
