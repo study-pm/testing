@@ -1,5 +1,12 @@
 # Setup
 
+- [Init project](#init-project)
+- [Install](#install)
+  - [Server](#server)
+  - [Unit testing](#unit-testing)
+  - [E2E testing](#e2e-testing)
+  - [Test reports](#test-reports)
+
 ## Init project
 
 ```sh
@@ -7,12 +14,14 @@ $ npm init      # Initialize in a dialogue mode
 $ npm init -y   # Initialize with default values
 ```
 
-## Install server
+## Install
+
+### Server
 ```sh
 $ npm i live-server
 ```
 
-## Install testing software
+### Unit testing
 
 Install Jest:
 ```sh
@@ -58,6 +67,8 @@ Setup file transforming and matching options:
   },
 ```
 
+### E2E testing
+
 Install Selenium WebDriver:
 ```sh
 $ npm install --save-dev selenium-webdriver
@@ -67,6 +78,8 @@ Install concurrently to run sever and e2e test with selenium in parallel:
 ```sh
 $ npm i -D concurrently
 ```
+
+### Test reports
 
 Install Jest-HTML-Reporter:
 ```sh
@@ -147,4 +160,25 @@ module.exports = {
     ],
   ],
 };
+```
+
+Or in *package.json* "jest" section:
+```json
+"reporters": [
+      "default",
+      [
+        "jest-junit",
+        {
+          "outputDirectory": "./test/reports",
+          "outputName": "report.xml"
+        }
+      ],
+      [
+        "./node_modules/jest-html-reporter",
+        {
+          "pageTitle": "Test Report",
+          "outputPath": "./test/reports/report.html"
+        }
+      ]
+    ],
 ```
