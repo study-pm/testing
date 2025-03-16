@@ -12,7 +12,8 @@
   },
   "scripts": {
     "serve": "npx live-server",
-    "start": "npm run serve"
+    "start": "npm run serve",
+    "test": "jest --verbose ./test"
   },
   "repository": {
     "type": "git",
