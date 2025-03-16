@@ -19,6 +19,7 @@
     "test:unit": "jest --verbose --coverage ./test/jest.test.js"
   },
   "jest": {
+    "coverageDirectory": "test/coverage",
     "reporters": [
       "default",
       [
