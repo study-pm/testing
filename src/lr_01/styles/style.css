@@ -211,9 +211,6 @@ input[type="reset"] {
 output{
     min-height: 3em;
 }
-[name="form_out"].state_error {
-    color: hsl(0, 100%, 60%);
-}
 
 /* Lists */
 ul li {
@@ -223,6 +220,9 @@ ul li {
 /* Text */
 p {
     font-size: medium;
+}
+p.size_small {
+    font-size: small;
 }
 
 /* Actions */
@@ -239,6 +239,9 @@ p {
 }
 .is_off {
     opacity: 0;
+}
+.state_error {
+    color: hsl(0, 100%, 60%);
 }
 
 @media (max-width: 720px) {
