@@ -8,14 +8,15 @@
   },
   "config": {
     "host": "127.0.0.1",
-    "port": "8080"
+    "port": "8081"
   },
   "scripts": {
     "serve": "npx live-server",
+    "serve:test": "npx live-server -q --no-browser --host=%npm_package_config_host% --port=%npm_package_config_port%",
     "start": "npm run serve",
-    "test": "concurrently \"npm:start\" \"jest --verbose ./test/\"",
-    "test:e2e": "concurrently \"npm:start\" \"jest --verbose ./test/selenium.test.js\"",
-    "test:unit": "jest --verbose ./test/jest.test.js"
+    "test": "concurrently \"npm run serve:test\" \"jest --verbose --coverage ./test/\"",
+    "test:e2e": "concurrently \"npm run serve:test\" \"jest --verbose --coverage ./test/selenium.test.js\"",
+    "test:unit": "jest --verbose --coverage ./test/jest.test.js"
   },
   "jest": {
     "transform": {
