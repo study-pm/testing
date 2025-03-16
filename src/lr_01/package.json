@@ -13,7 +13,9 @@
   "scripts": {
     "serve": "npx live-server",
     "start": "npm run serve",
-    "test": "jest --verbose ./test"
+    "test": "concurrently \"npm:start\" \"jest --verbose ./test/\"",
+    "test:e2e": "concurrently \"npm:start\" \"jest --verbose ./test/selenium.test.js\"",
+    "test:unit": "jest --verbose ./test/jest.test.js"
   },
   "jest": {
     "transform": {
