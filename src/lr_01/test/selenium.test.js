@@ -30,7 +30,7 @@ describe('Triangle Type Checker Form', () => {
         }, 5000);
 
         const result = await driver.findElement(By.name('result')).getText();
-        expect(result).toBe('Треугольник равносторонний.');
+        expect(result).toBe('Треугольник равносторонний');
     });
 
     it('should identify an isosceles triangle', async () => {
@@ -48,7 +48,7 @@ describe('Triangle Type Checker Form', () => {
         }, 5000);
 
         const result = await driver.findElement(By.name('result')).getText();
-        expect(result).toBe('Треугольник равнобедренный.');
+        expect(result).toBe('Треугольник равнобедренный');
     });
 
     it('should identify a scalene triangle', async () => {
@@ -66,7 +66,7 @@ describe('Triangle Type Checker Form', () => {
         }, 5000);
 
         const result = await driver.findElement(By.name('result')).getText();
-        expect(result).toBe('Треугольник разносторонний.');
+        expect(result).toBe('Треугольник разносторонний');
     });
 
     it('should display an error for invalid triangle (sum of two sides <= third side)', async () => {
