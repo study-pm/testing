@@ -11,10 +11,10 @@ export default class Triangle {
                 throw new Error(`Invalid input argument type ${typeof item}: должно быть числом или строковым представлением числа`);
             }
             let parsed = item;
-            if (typeof item === 'string') parsed = parseFloat(item);
             try {
-                if (Number.isNaN(parsed)) {
-                    throw new Error(`должно быть натуральное число`);
+                if (typeof item === 'string') {
+                    if (!/^\d+$/.test(item)) throw new Error(`должно быть натуральное число без пробелов и нецифровых символов`);
+                    parsed = parseInt(item);
                 }
                 if (parsed % 1 !== 0) {
                     throw new Error(`должно быть целое число`);
@@ -23,7 +23,7 @@ export default class Triangle {
                     throw new Error(`должно быть целое число больше нуля`);
                 }
                 if (parsed > Number.MAX_SAFE_INTEGER) {
-                    throw new Error(`должно быть внутри безопасного числового диапазона`);
+                    throw new Error(`не должно превышать максимального значения`);
                 }
                 return parsed;
             }
