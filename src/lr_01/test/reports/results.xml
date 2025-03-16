@@ -1,53 +1,59 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuites name="jest tests" tests="23" failures="0" errors="0" time="4.543">
-  <testsuite name="Triangle class" errors="0" failures="0" skipped="0" timestamp="2025-03-16T20:34:03" time="0.5" tests="16">
-    <testcase classname="Triangle class should create a new Triangle instance" name="Triangle class should create a new Triangle instance" time="0.005">
+<testsuites name="jest tests" tests="26" failures="0" errors="0" time="4.436">
+  <testsuite name="Triangle class" errors="0" failures="0" skipped="0" timestamp="2025-03-16T21:54:40" time="0.621" tests="19">
+    <testcase classname="Triangle class exists: should create a new Triangle instance" name="Triangle class exists: should create a new Triangle instance" time="0.004">
     </testcase>
-    <testcase classname="Triangle class should identify an equilateral triangle" name="Triangle class should identify an equilateral triangle" time="0.001">
+    <testcase classname="Triangle class equilateral: should identify an equilateral triangle" name="Triangle class equilateral: should identify an equilateral triangle" time="0">
     </testcase>
-    <testcase classname="Triangle class should identify an isosceles triangle" name="Triangle class should identify an isosceles triangle" time="0">
+    <testcase classname="Triangle class isosceles: should identify an isosceles triangle" name="Triangle class isosceles: should identify an isosceles triangle" time="0.001">
     </testcase>
-    <testcase classname="Triangle class should identify a scalene triangle" name="Triangle class should identify a scalene triangle" time="0">
+    <testcase classname="Triangle class scalene: should identify a scalene triangle" name="Triangle class scalene: should identify a scalene triangle" time="0">
     </testcase>
-    <testcase classname="Triangle class limit min: should handle extremely small (min) numbers" name="Triangle class limit min: should handle extremely small (min) numbers" time="0.001">
+    <testcase classname="Triangle class lmt min: should handle extremely small numbers" name="Triangle class lmt min: should handle extremely small numbers" time="0">
     </testcase>
-    <testcase classname="Triangle class limit min+1: should handle extremely small (min) numbers" name="Triangle class limit min+1: should handle extremely small (min) numbers" time="0">
+    <testcase classname="Triangle class near lmt min+1: should handle near small numbers" name="Triangle class near lmt min+1: should handle near small numbers" time="0.001">
     </testcase>
-    <testcase classname="Triangle class should throw an error for non-array input" name="Triangle class should throw an error for non-array input" time="0.009">
+    <testcase classname="Triangle class mean max/2: should handle mean numbers" name="Triangle class mean max/2: should handle mean numbers" time="0">
     </testcase>
-    <testcase classname="Triangle class should throw an error for array with less than three elements" name="Triangle class should throw an error for array with less than three elements" time="0.001">
+    <testcase classname="Triangle class near lmt max-1: should handle near large numbers" name="Triangle class near lmt max-1: should handle near large numbers" time="0">
     </testcase>
-    <testcase classname="Triangle class should throw an error for array with more than three elements" name="Triangle class should throw an error for array with more than three elements" time="0">
+    <testcase classname="Triangle class lmt max: should handle extremely large numbers" name="Triangle class lmt max: should handle extremely large numbers" time="0.001">
     </testcase>
-    <testcase classname="Triangle class should throw an error for non-numeric input" name="Triangle class should throw an error for non-numeric input" time="0.001">
+    <testcase classname="Triangle class not-exists: should throw an error for invalid triangle sides" name="Triangle class not-exists: should throw an error for invalid triangle sides" time="0.008">
     </testcase>
-    <testcase classname="Triangle class should throw an error for negative or zero input" name="Triangle class should throw an error for negative or zero input" time="0.001">
+    <testcase classname="Triangle class underflow min-1: should throw an error for negative or zero input" name="Triangle class underflow min-1: should throw an error for negative or zero input" time="0.001">
     </testcase>
-    <testcase classname="Triangle class should throw an error for invalid triangle sides" name="Triangle class should throw an error for invalid triangle sides" time="0">
+    <testcase classname="Triangle class overflow max+1: should throw an error for exceeding maximum integer value" name="Triangle class overflow max+1: should throw an error for exceeding maximum integer value" time="0.001">
     </testcase>
-    <testcase classname="Triangle class should throw an error for fractional numbers" name="Triangle class should throw an error for fractional numbers" time="0.001">
+    <testcase classname="Triangle class format frac: should throw an error for fractional input" name="Triangle class format frac: should throw an error for fractional input" time="0">
     </testcase>
-    <testcase classname="Triangle class should handle non-numeric strings" name="Triangle class should handle non-numeric strings" time="0">
+    <testcase classname="Triangle class format frac: should throw an error for fractional numbers" name="Triangle class format frac: should throw an error for fractional numbers" time="0">
     </testcase>
-    <testcase classname="Triangle class should handle non-string, non-number inputs" name="Triangle class should handle non-string, non-number inputs" time="0.001">
+    <testcase classname="Triangle class type args NaN: exc non-numeric: should throw an error for non-numeric input" name="Triangle class type args NaN: exc non-numeric: should throw an error for non-numeric input" time="0.001">
     </testcase>
-    <testcase classname="Triangle class should handle extremely large inputs that exceed maximum integer value" name="Triangle class should handle extremely large inputs that exceed maximum integer value" time="0">
+    <testcase classname="Triangle class type args NaN: should handle non-string, non-number inputs" name="Triangle class type args NaN: should handle non-string, non-number inputs" time="0.001">
+    </testcase>
+    <testcase classname="Triangle class type agrument: not array: should throw an error for non-array input" name="Triangle class type agrument: not array: should throw an error for non-array input" time="0.001">
+    </testcase>
+    <testcase classname="Triangle class args count under: should throw an error for array with less than three elements" name="Triangle class args count under: should throw an error for array with less than three elements" time="0">
+    </testcase>
+    <testcase classname="Triangle class args count over: should throw an error for array with more than three elements" name="Triangle class args count over: should throw an error for array with more than three elements" time="0">
     </testcase>
   </testsuite>
-  <testsuite name="Triangle Type Checker Form" errors="0" failures="0" skipped="0" timestamp="2025-03-16T20:34:03" time="4.36" tests="7">
-    <testcase classname="Triangle Type Checker Form should identify an equilateral triangle" name="Triangle Type Checker Form should identify an equilateral triangle" time="0.679">
+  <testsuite name="Triangle Type Checker Form" errors="0" failures="0" skipped="0" timestamp="2025-03-16T21:54:40" time="4.264" tests="7">
+    <testcase classname="Triangle Type Checker Form should identify an equilateral triangle" name="Triangle Type Checker Form should identify an equilateral triangle" time="0.78">
     </testcase>
-    <testcase classname="Triangle Type Checker Form should identify an isosceles triangle" name="Triangle Type Checker Form should identify an isosceles triangle" time="0.395">
+    <testcase classname="Triangle Type Checker Form should identify an isosceles triangle" name="Triangle Type Checker Form should identify an isosceles triangle" time="0.397">
     </testcase>
-    <testcase classname="Triangle Type Checker Form should identify a scalene triangle" name="Triangle Type Checker Form should identify a scalene triangle" time="0.367">
+    <testcase classname="Triangle Type Checker Form should identify a scalene triangle" name="Triangle Type Checker Form should identify a scalene triangle" time="0.346">
     </testcase>
-    <testcase classname="Triangle Type Checker Form should display an error for invalid triangle (sum of two sides &lt;= third side)" name="Triangle Type Checker Form should display an error for invalid triangle (sum of two sides &lt;= third side)" time="0.355">
+    <testcase classname="Triangle Type Checker Form should display an error for invalid triangle (sum of two sides &lt;= third side)" name="Triangle Type Checker Form should display an error for invalid triangle (sum of two sides &lt;= third side)" time="0.349">
     </testcase>
-    <testcase classname="Triangle Type Checker Form should display an error for non-integer input" name="Triangle Type Checker Form should display an error for non-integer input" time="0.372">
+    <testcase classname="Triangle Type Checker Form should display an error for non-integer input" name="Triangle Type Checker Form should display an error for non-integer input" time="0.353">
     </testcase>
-    <testcase classname="Triangle Type Checker Form should display an error for zero or negative input" name="Triangle Type Checker Form should display an error for zero or negative input" time="0.341">
+    <testcase classname="Triangle Type Checker Form should display an error for zero or negative input" name="Triangle Type Checker Form should display an error for zero or negative input" time="0.351">
     </testcase>
-    <testcase classname="Triangle Type Checker Form should display an error for non-numeric input" name="Triangle Type Checker Form should display an error for non-numeric input" time="0.348">
+    <testcase classname="Triangle Type Checker Form should display an error for non-numeric input" name="Triangle Type Checker Form should display an error for non-numeric input" time="0.337">
     </testcase>
   </testsuite>
 </testsuites>
