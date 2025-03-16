@@ -15,7 +15,7 @@ document.form_novalidate.addEventListener('submit', (evt) => {
         const triangle = new Triangle([sides[0], sides[1], sides[2]]);
         const kind = Triangle.kinds.get(triangle.kind).ru;
         legend.textContent = "Результат";
-        result.textContent = `Треугольник ${kind}.`;
+        result.textContent = `Треугольник ${kind}`;
         output.classList.remove("state_error");
     }
     catch (err) {
