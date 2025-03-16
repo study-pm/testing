@@ -8,18 +8,22 @@ export default class Triangle {
         }
         const sides =  input.map(item => {
             if (typeof item !== 'string' && typeof item !== 'number') {
-                throw new Error(`Invalid input argument type ${typeof item}: must be a string or number`);
+                throw new Error(`Invalid input argument type ${typeof item}: должно быть числом или строковым представлением числа`);
             }
-            const parsed = parseInt(item);
+            let parsed = item;
+            if (typeof item === 'string') parsed = parseFloat(item);
             try {
                 if (Number.isNaN(parsed)) {
                     throw new Error(`должно быть натуральное число`);
+                }
+                if (parsed % 1 !== 0) {
+                    throw new Error(`должно быть целое число`);
                 }
                 if (parsed < 1) {
                     throw new Error(`должно быть целое число больше нуля`);
                 }
                 if (parsed > Number.MAX_SAFE_INTEGER) {
-                    throw new Error(`must be within safe integer range`);
+                    throw new Error(`должно быть внутри безопасного числового диапазона`);
                 }
                 return parsed;
             }
