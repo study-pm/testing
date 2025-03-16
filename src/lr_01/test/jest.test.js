@@ -64,4 +64,25 @@ describe('Triangle class', () => {
         expect(() => new Triangle([1, -2, 3])).toThrowError('Invalid input argument value -2: должно быть целое число больше нуля');
     });
 
+    it('should throw an error for invalid triangle sides', () => {
+        expect(() => new Triangle([1, 2, 5])).toThrowError('Invalid triangle: невозможно построить треугольник с указанными сторонами');
+    });
+
+    it('should throw an error for fractional numbers', () => {
+        expect(() => new Triangle([3.5, 4.2, 5.1])).toThrowError('Invalid input argument value 3.5: должно быть целое число');
+    });
+
+    it('should handle non-numeric strings', () => {
+        expect(() => new Triangle(['3', '4', 'a'])).toThrowError('Invalid input argument value a: должно быть натуральное число');
+    });
+
+    it('should handle non-string, non-number inputs', () => {
+        expect(() => new Triangle([3, 4, null])).toThrowError('Invalid input argument type object: должно быть числом или строковым представлением числа');
+        expect(() => new Triangle([3, 4, true])).toThrowError('Invalid input argument type boolean: должно быть числом или строковым представлением числа');
+    });
+
+    it('should handle extremely large inputs that exceed maximum integer value', () => {
+        expect(() => new Triangle([Number.MAX_SAFE_INTEGER + 1, Number.MAX_SAFE_INTEGER + 1, Number.MAX_SAFE_INTEGER + 1])).toThrowError('Invalid input argument value ' + (Number.MAX_SAFE_INTEGER + 1) + ': должно быть внутри безопасного числового диапазона');
+    });
+
 });
