@@ -4,20 +4,34 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Triangle</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,100..1000&display=swap" rel="stylesheet">
+    <link href="./styles/style.css" rel="stylesheet">
     <script src="./scripts/app.js" type="module"></script>
 </head>
 <body>
-    <h1>Triangle Type Checker</h1>
+    <header></header>
+    <main>
+    <aside></aside>
+    <article>
+    <section style="max-width: 50em">
+    <h1>Введите длины сторон треугольника</h1>
+
     <form name="form_novalidate">
-        <label>No validation</label>
         <fieldset>
-            <input type="text" name="side1">
-            <input type="text" name="side2">
-            <input type="text" name="side3">
+            <input type="text" name="a">
+            <input type="text" name="b">
+            <input type="text" name="c">
         </fieldset>
-        <button type="reset">Clear</button>
-        <button type="submit">Check Triangle</button>
-        <output name="result"></output>
+        <fieldset>
+            <input type="reset" value="Сброс"></button>
+            <input type="submit" value="Проверить"></button>
+        </fieldset>
+        <fieldset name="form_out" class="border_on type_hidden">
+            <legend>Result</legend>
+            <output name="result"></output>
+        </fieldset>
     </form>
 
     <h2>Отчеты</h2>
@@ -25,5 +39,9 @@
         <li><a href="./test/reports/results.html">Результаты</a></li>
         <li><a href="./test/coverage/lcov-report/index.html">Покрытие</a></li>
     </ul>
+    </section>
+    </article>
+    <aside></aside>
+    </main>
 </body>
 </html>
