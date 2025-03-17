@@ -24,7 +24,7 @@ section {
 body {
     background-color: hsl(200, 50%, 20%);
     background-image: var(--back-theme_cyan);
-    color: light-dark(var(--txt-mode_light), var(--txt-mode_dark));
+    color: var(--txt-mode_dark);
     display: flex;
     flex-direction: column;
     font-family: "Roboto Flex", serif;
